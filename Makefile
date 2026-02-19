@@ -1,6 +1,6 @@
 PROJECT_DIR := $(shell dirname $(abspath $(lastword $(MAKEFILE_LIST))))
 GOLANGCI_LINT = go tool -modfile tools/go.mod github.com/golangci/golangci-lint/v2/cmd/golangci-lint
-MODERNIZE = go tool -modfile tools/go.mod golang.org/x/tools/gopls/internal/analysis/modernize/cmd/modernize
+MODERNIZE = go tool -modfile tools/modernize/go.mod golang.org/x/tools/gopls/internal/analysis/modernize/cmd/modernize
 
 VERSION     ?= $(shell git describe --always --abbrev=7)
 
